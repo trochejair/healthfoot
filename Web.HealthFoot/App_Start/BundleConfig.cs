@@ -69,6 +69,44 @@ namespace Web.HealthFoot
 
             bundles.Add(new ScriptBundle("~/bundles/init").Include(
                       "~/Scripts/init.js"));
+            /*Fin de plantilla para administrador*/
+
+            /**
+             * Estilos para la principal de ecommerce
+             * */
+
+            bundles.Add(new StyleBundle("~/Content/webcss").Include(
+                      "~/Content/Web/plugins/jquery-ui/jquery-ui.css",
+                      "~/Content/Web/plugins/bootstrap/css/bootstrap.min.css",
+                      "~/Content/Web/plugins/font-awesome/css/font-awesome.min.css",
+                      "~/Content/Web/plugins/selectbox/select_option1.css",
+                      "~/Content/Web/plugins/fancybox/jquery.fancybox.min.css",
+                      "~/Content/Web/plugins/iziToast/css/iziToast.css",
+                      "~/Content/Web/plugins/prismjs/prism.css",
+                      "~/Content/Web/plugins/rs-plugin/css/settings.css",
+                      "~/Content/Web/plugins/slick/slick.css",
+                      "~/Content/Web/plugins/slick/slick-theme.css",
+                      "~/Content/Web/css/style.css",
+                      "~/Content/Web/css/default.css"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/webjs").Include(
+                      "~/Content/Web/plugins/jquery/jquery-migrate-3.0.0.min.js",
+                      "~/Content/Web/plugins/jquery-ui/jquery-ui.js",
+                      "~/Content/Web/plugins/bootstrap/js/popper.min.js",
+                      "~/Content/Web/plugins/bootstrap/js/bootstrap.min.js",
+                      "~/Content/Web/plugins/rs-plugin/js/jquery.themepunch.tools.min.js",
+                      "~/Content/Web/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js",
+                      "~/Content/Web/plugins/slick/slick.js",
+                      "~/Content/Web/plugins/fancybox/jquery.fancybox.min.js",
+                      "~/Content/Web/plugins/iziToast/js/iziToast.js",
+                      "~/Content/Web/plugins/prismjs/prism.js",
+                      "~/Content/Web/plugins/selectbox/jquery.selectbox-0.1.3.min.js",
+                      "~/Content/Web/plugins/countdown/jquery.syotimer.js",
+                      "~/Content/Web/plugins/velocity/velocity.min.js",
+                      "~/Content/Web/js/custom.js",
+                      "~/Content/Web/js/rocket-loader.min.js"
+                      ));
         }
     }
 }
