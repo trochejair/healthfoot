@@ -1,0 +1,122 @@
+﻿@using Web.HealthFoot.Models
+
+@{
+    ViewBag.Title = "Ver Usuario";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            @Html.ActionLink("Editar", "Edit", "Usuarios", new { id = @ViewBag.Usuario.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Regresar", "List", "Usuarios", new { @class = "btn btn-danger" })
+
+        </div>
+    </div>
+}
+
+<div class="col-12 container">
+
+    <h2>Usuario</h2>
+
+</div>
+
+<div class="col-12">
+
+    <label>Detalle de Usuario</label>
+
+</div>
+
+<div class="container card border border-dark">
+
+    <div class="col-12 p-4">
+
+        <div class="col-12">
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Nombre:
+                </label>
+                <div class="col-sm-10">
+                    <label>
+                        @ViewBag.Usuario.Nombre
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Apellido Paterno:
+                </label>
+                <div class="col-sm-10">
+                    <label class"form-control" type="text">
+                        @ViewBag.Usuario.ApellidoP
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Apellido Materno:
+                </label>
+                <div class="col-sm-10">
+                    <label class"form-control" type="text">
+                        @ViewBag.Usuario.ApellidoM
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Email:
+                </label>
+                <div class="col-sm-10">
+                    <label class"form-control" type="text">
+                        @ViewBag.Usuario.Email
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Status:
+                </label>
+                <div class="col-sm-10">
+                    <label class"form-control" type="text">
+                        @ViewBag.Usuario.Status
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-12">
+
+    <label>Información de acceso</label>
+
+</div>
+
+<div class="container card border border-dark">
+
+    <div class="col-12 p-4">
+
+        <div class="form-group row">
+            <label for="example-text-input" class="col-sm-2 col-form-label">
+                Rol:
+            </label>
+            <div class="col-sm-10">
+                <label class"form-control" type="text">
+                    @ViewBag.Usuario.Rol.Nombre
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+</div>

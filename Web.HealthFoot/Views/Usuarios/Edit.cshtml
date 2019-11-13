@@ -1,0 +1,234 @@
+﻿@using Web.HealthFoot.Models
+
+@{
+    ViewBag.Title = "Modifica Usuario";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            @Html.ActionLink("Actualizar", "Update", "Usuarios", new { @class = "btn btn-primary" })
+            @Html.ActionLink("Cancelar", "List", "Usuarios", new { @class = "btn btn-danger" })
+
+        </div>
+    </div>
+}
+
+<div class="col-12 container">
+
+    <h2>Modifica Usuario</h2>
+
+</div>
+
+<ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+
+    <li class="nav-item">
+
+        @Html.ActionLink("General", "Edit", "Usuarios", new { id = ViewBag.UsuarioId }, new { Class = "nav-link active" })
+
+    </li>
+
+    <li class="nav-item">
+
+        @Html.ActionLink("Directorio", "List", "Directorio", new { id = ViewBag.UsuarioId }, new { Class = "nav-link" })
+
+    </li>
+
+</ul>
+
+<br />
+<br />
+
+
+
+<div class="col-12">
+
+    <label>Detalle de Usuario</label>
+
+</div>
+
+<div class="container card border border-dark">
+
+    <div class="col-12 p-4">
+
+        <div class="col-12">
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Nombre:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduzca nombre del usuario" id="Nombre" name="Nombre" value="@ViewBag.Usuario.Nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Apellido Paterno:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduzca apellido paterno del usuario" id="ApellidoP" name="ApellidoP" value="@ViewBag.Usuario.ApellidoP">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Apellido Materno:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduzca apellido materno del usuario" id="ApellidoM" name="ApellidoM" value="@ViewBag.Usuario.ApellidoM">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Email:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduzca email del usuario" id="Email" name="Email" value="@ViewBag.Usuario.Email">
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <label class="col-sm-2 col-form-label">
+                    Status
+                </label>
+
+                <div class="col-sm-10">
+
+                    <div class="custom-control custom-radio custom-control-inline">
+
+                        @if (@ViewBag.Usuario.Status == 1)
+                        {
+
+                            <input type="radio" id="Status1" name="Status1" class="custom-control-input" checked>
+
+                        }
+                        else
+                        {
+
+                            <input type="radio" id="Status1" name="Status1" class="custom-control-input" checked>
+
+                        }
+                        <label class="custom-control-label" for="Status1">
+                            Activo
+                        </label>
+
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+
+                        @if (@ViewBag.Usuario.Status == 0)
+                        {
+
+                            <input type="radio" id="Status2" name="Status1" class="custom-control-input" checked>
+
+                        }
+                        else
+                        {
+
+                            <input type="radio" id="Status2" name="Status1" class="custom-control-input">
+
+                        }
+                        <label class="custom-control-label" for="Status2">
+                            Desactivo
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-12">
+
+    <label>Contraseña</label>
+
+</div>
+
+<div class="container card border border-dark">
+
+    <div class="col-12 p-4">
+
+        <div class="col-12">
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Contraseña:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduzca nueva contraseña" id="Password" name="Password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Confirmar:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Vuelva a introducir su contraseña" id="Confirmar" name="Condirmar">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-12">
+
+    <label>Información de acceso</label>
+
+</div>
+
+<div class="container card border border-dark">
+
+    <div class="col-12 p-4">
+
+        <div class="col-12">
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">
+                    Rol
+                </label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+
+                        @foreach (Rol Rol in ViewBag.Rol)
+                        {
+
+                            if (Rol.Id == ViewBag.Usuario.Id)
+                            {
+
+                                <option value="@Rol.Id" selected>@Rol.Nombre</option>
+
+                            }
+                            else
+                            {
+
+                                <option value="@Rol.Id">@Rol.Nombre</option>
+
+                            }
+
+                        }
+
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

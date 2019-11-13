@@ -1,0 +1,151 @@
+﻿@using Web.HealthFoot.Models
+
+@{
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+
+    <div class="row">
+        <div class="col-md-12">
+
+                @Html.ActionLink("Agregar", "Create", "Usuarios", new { @class = "btn btn-primary" })
+
+        </div>
+    </div>
+}
+
+        <div class="col-12">
+
+            <h2>Usuarios</h2>
+
+        </div>
+
+                <div class="col-12">
+
+                    <table class="table datatable">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+
+                                    Id
+
+                                </th>
+
+                                <th>
+
+                                    Email
+
+                                </th>
+
+                                <th>
+
+                                    Nombre
+
+                                </th>
+
+                                <th>
+
+                                    Rol
+
+                                </th>
+
+                                <th>
+
+                                    Status
+
+                                </th>
+
+                                <th>
+
+                                    Registro
+
+                                </th>
+
+                                <th>
+
+                                    Ultima visita
+
+                                </th>
+
+                                <th>
+
+
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (Usuario Usuario in ViewBag.Usuario)
+                            {
+
+                                <tr>
+
+                                    <td>
+
+                                        @Usuario.Id
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.Email
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.Nombre
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.Rol.Nombre
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.Status
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.Registro
+
+                                    </td>
+
+                                    <td>
+
+                                        @Usuario.UltimaVisita
+
+                                    </td>
+
+                                    <td>
+
+                                        <a href="@Url.Action("Show", "Usuarios" , new { id=@Usuario.Id })"><i class="fas fa-eye"></i></a>
+                                        <a href="@Url.Action("Edit", "Usuarios" , new { id=@Usuario.Id })"><i class="fas fa-edit"></i></a>
+                                        <a href="@Url.Action("Delete", "Usuarios")"><i class="fas fa-trash"></i></a>
+
+                                    </td>
+
+                                </tr>
+
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
