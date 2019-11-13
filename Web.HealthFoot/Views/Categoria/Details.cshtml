@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Detalle categoría";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 text-center my-3">
+        <h2>Ver categoría</h2>
+    </div>
+    <div class="col-md-6 mx-auto">
+
+        <form>
+            <fieldset disabled>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="estatus">Estatus</label>
+                            <input type="text" class="form-control" id="estatus" placeholder="Estatus">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="col-md-12 text-center">
+                <a class="btn btn-primary" href="@Url.Action("Edit","Categoria")" role="button">Editar</a>
+            </div>
+            
+
+        </form>
+    </div>
+</div>
