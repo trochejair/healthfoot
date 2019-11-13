@@ -1,4 +1,5 @@
-﻿using System.Web;
+
+using System.Web;
 using System.Web.Optimization;
 
 namespace Web.HealthFoot
@@ -28,3 +29,4 @@ namespace Web.HealthFoot
         }
     }
 }
+

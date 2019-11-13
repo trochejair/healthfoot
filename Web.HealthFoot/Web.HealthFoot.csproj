@@ -165,15 +165,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\BundleConfig3.cs" />
+
     <Compile Include="App_Start\BundleConfig4.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\FilterConfig2.cs" />
     <Compile Include="App_Start\FilterConfig3.cs" />
     <Compile Include="App_Start\FilterConfig4.cs" />
+
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\RouteConfig2.cs" />
     <Compile Include="App_Start\RouteConfig3.cs" />
+
     <Compile Include="App_Start\RouteConfig4.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -235,6 +238,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\crema.jpeg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Web\css\colors\default.html" />
     <Content Include="Content\Web\css\default.css" />
@@ -560,6 +564,14 @@
     <Content Include="Views\Home\Administracion.cshtml" />
     <Content Include="Views\Shared\_LayoutWeb.cshtml" />
     <Content Include="Views\Home\Principal.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Categoria\Create.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Productos\Details.cshtml" />
+    <Content Include="Views\Categoria\Edit.cshtml" />
+    <Content Include="Views\Categoria\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
