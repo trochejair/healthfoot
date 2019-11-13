@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Insumos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+@section botones{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.ActionLink("Agregar", "Create", "Insumos", new { area = "" }, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Insumos</h2>
+    </div>
+    <div class="col-md-12">
+        <table class="table datatable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (int x = 1; x < 12; x++)
+                {
+                    <tr>
+                        <td>@x </td>
+                        <td>Insumo @x</td>
+                        <td>@x</td>
+                        <td>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-trash"></i>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

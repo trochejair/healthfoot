@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 text-center my-3">
+        <h2>Agregar insumo</h2>
+    </div>
+    <div class="col-md-6 mx-auto">
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inp-name">Nombre</label>
+                        <input type="text" class="form-control" id="inp-name" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inp-price">Precio</label>
+                        <input type="number" class="form-control" id="inp-price" placeholder="$$">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inp-description">Descripción</label>
+                        <input type="text" class="form-control" id="inp-description" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inp-unit">Unidad de medida</label>
+                        <input type="text" class="form-control" id="inp-unit" placeholder="kg, g, ml, L, etc">
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary rounded">
+                        Agregar
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

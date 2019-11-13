@@ -12,6 +12,7 @@
     @Styles.Render("~/Content/styleadmin")
     @Styles.Render("~/Content/Admin/style-admin.css")
 
+    @RenderSection("css", required: false)
 </head>
 <body>
     <!-- Begin page -->
@@ -126,9 +127,8 @@
                         <li><a href="index.html" class="waves-effect"><i class="fa fa-home" aria-hidden="true"></i><span>Inicio</span></a></li>
                         <li><a  href="@Url.Action("Index","Productos")" class="waves-effect"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>Productos</span></a></li>
                         <li><a  href="@Url.Action("Index","Categoria")" class="waves-effect"><i class="fa fa-list-ul" aria-hidden="true"></i><span>Categorías</span></a></li>
-                        <li><a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Calendar</span></a></li>
                         <li>
-                            <a href="javascript:void(0);" class="waves-effect">
+                            <a  href="#" class="waves-effect">
                                 <i class="fas fa-boxes "></i>
                                 <span>
                                     Compras
@@ -138,9 +138,15 @@
                                 </span>
                             </a>
                             <ul class="submenu">
-                                <li><a href="email-inbox.html">Proveedores</a></li>
-                                <li><a href="email-read.html">Insumos</a></li>
-                                <li><a href="email-compose.html">Ordenes</a></li>
+                                <li>
+                                    <a href="@Url.Action("Proveedores","Compras")">Proveedores</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Insumos","Compras")">Insumos</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Ordenes","Compras")">Ordenes</a>
+                                </li>
                             </ul>
                         </li>
                         

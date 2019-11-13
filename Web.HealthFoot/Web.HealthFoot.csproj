@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -165,25 +165,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\BundleConfig3.cs" />
-
     <Compile Include="App_Start\BundleConfig4.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\FilterConfig2.cs" />
     <Compile Include="App_Start\FilterConfig3.cs" />
     <Compile Include="App_Start\FilterConfig4.cs" />
-
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\RouteConfig2.cs" />
     <Compile Include="App_Start\RouteConfig3.cs" />
-
     <Compile Include="App_Start\RouteConfig4.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\DirectorioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InsumosController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdenesInsumosController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProveedoresController.cs" />
     <Compile Include="Controllers\RutaController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -232,12 +233,15 @@
     <Content Include="Content\Admin\fonts\typicons.svg" />
     <Content Include="Content\Admin\icons.css" />
     <Content Include="Content\Admin\metismenu.min.css" />
+    <Content Include="Content\Admin\Products\dropzone_init.js" />
     <Content Include="Content\Admin\style-admin.css" />
     <Content Include="Content\Admin\style.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Commons\dropzone\dropzone.css" />
+    <Content Include="Content\Commons\dropzone\dropzone.js" />
     <Content Include="Content\Images\crema.jpeg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Web\css\colors\default.html" />
@@ -572,6 +576,13 @@
     <Content Include="Views\Productos\Details.cshtml" />
     <Content Include="Views\Categoria\Edit.cshtml" />
     <Content Include="Views\Categoria\Details.cshtml" />
+    <Content Include="Views\Compras\Proveedores.cshtml" />
+    <Content Include="Views\Compras\Insumos.cshtml" />
+    <Content Include="Views\Compras\Ordenes.cshtml" />
+    <Content Include="Views\OrdenesInsumos\Create.cshtml" />
+    <Content Include="Views\Insumos\Create.cshtml" />
+    <Content Include="Views\Proveedores\Create.cshtml" />
+    <Content Include="Views\Proveedores\Ordenes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
