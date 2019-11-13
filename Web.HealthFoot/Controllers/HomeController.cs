@@ -36,5 +36,25 @@ namespace Web.HealthFoot.Controllers
         {
             return View();
         }
+
+        public ActionResult InicioSesion()
+        {
+            return View();
+        }
+
+        public ActionResult Registro()
+        {
+            return View();
+        }
+
+        public ActionResult Producto()
+        {
+            return View();
+        }
+
+        public ActionResult ProductoDetail()
+        {
+            return View();
+        }
     }
 }
