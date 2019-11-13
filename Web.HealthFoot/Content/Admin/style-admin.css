@@ -1,3 +1,7 @@
-﻿.eye {
+﻿.fa-eye, .fa-edit, .fas {
     color: #626ed4;
+    font-size: 18px;
+}
+.fa-trash {
+color: red;
 }
