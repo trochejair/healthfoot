@@ -1,0 +1,101 @@
+﻿@using Web.HealthFoot.Models
+
+@{
+    ViewBag.Title = "Roles";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            @Html.ActionLink("Agregar", "Create", "Roles", new { @class = "btn btn-primary" })
+
+        </div>
+    </div>
+}
+
+        <div class="col-12">
+
+            <h2>Roles</h2>
+
+        </div>
+
+                <div class="col-12">
+
+                    <table class="table datatable">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+
+                                    Id
+
+                                </th>
+
+                                <th>
+
+                                    Rol
+
+                                </th>
+
+                                <th>
+
+                                    Status
+
+                                </th>
+
+                                <th>
+
+
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (Rol Rol in ViewBag.Rol)
+                            {
+                                <tr>
+
+                                    <td>
+
+                                        @Rol.Id
+
+                                    </td>
+
+                                    <td>
+
+                                        @Rol.Nombre
+
+                                    </td>
+
+                                    <td>
+
+                                        @Rol.Status
+
+                                    </td>
+
+                                    <td>
+
+                                        <a href="@Url.Action("Show", "Roles" , new { id=@Rol.Id })"><i class="fas fa-eye"></i></a>
+                                        <a href="@Url.Action("Edit", "Roles" , new { id=@Rol.Id })"><i class="fas fa-edit"></i></a>
+                                        <a href="@Url.Action("Delete", "Roles")"><i class="fas fa-trash"></i></a>
+
+                                    </td>
+
+                                </tr>
+
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>

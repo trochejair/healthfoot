@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Rutas";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+    <div class="col-md-12">
+        <button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+    </div>    
+}
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>Ruta</th>
+            <th>Fecha</th>
+            <th>Vehículo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>10/10/2019</td>
+            <td>Toluca-Tenango</td>
+            <td>Ford</td>
+            <td>
+                <button class="btn btn-sm btn-success"><i class="fa fa-eye"></i></button>
+                <button class="btn btn-sm btn-info"><i class="fa fa-edit"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td>10/10/2019</td>
+            <td>Toluca-Lerma</td>
+            <td>Honda</td>
+            <td>
+                <button class="btn btn-sm btn-success"><i class="fa fa-eye"></i></button>
+                <button class="btn btn-sm btn-info"><i class="fa fa-edit"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

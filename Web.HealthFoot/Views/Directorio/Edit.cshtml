@@ -1,0 +1,145 @@
+﻿@using Web.HealthFoot.Models
+
+@{
+    ViewBag.Title = "Editar Dirección";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section botones{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            @Html.ActionLink("Actualizar", "Update", "Directorio", new { @class = "btn btn-primary" })
+            @Html.ActionLink("Cancelar", "List", "Directorio", new { id = ViewBag.UsuarioId }, new { @class = "btn btn-danger" })
+
+        </div>
+    </div>
+}
+
+<div class="col-12 container">
+
+    <h2>Usuario</h2>
+
+</div>
+
+<ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+
+    <li class="nav-item">
+
+        @Html.ActionLink("General", "Edit", "Usuarios", new { id = ViewBag.UsuarioId }, new { Class = "nav-link" })
+
+    </li>
+
+    <li class="nav-item">
+
+        @Html.ActionLink("Directorio", "List", "Directorio", new { id = ViewBag.UsuarioId }, new { Class = "nav-link active" })
+
+    </li>
+
+</ul>
+
+<br />
+<br />
+
+<div class="col-12">
+
+    <div class="col-12">
+
+        <label>Detalle de dirección</label>
+
+    </div>
+
+    <div class="container card border border-dark">
+
+        <div class="col-12 p-4">
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Titular:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Ingrese el nombre del titular del domicilio" id="Titular" name="Titular" value="@ViewBag.Directorio.Titular">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    País:
+                </label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+
+                        <option>País</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Estado:
+                </label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+
+                        <option>Estado</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Ciudad:
+                </label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+
+                        <option>Ciudad</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Dirección:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Ingrese la dirección del domicilio" id="Calle" name="Calle" value="@ViewBag.Directorio.Calle">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    CP:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Ingrese el código postal del domicilio" id="CP" name="CP" value="@ViewBag.Directorio.CP">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    (Opcional) Referencias:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Da nos una referencia para ubicarlos fácilmente" id="Referencia" name="Referencia" value="@ViewBag.Directorio.Referencia">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">
+                    Teléfono de contacto:
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-sm" type="text" placeholder="Introduce el teléfono" id="Telefono" name="Telefono" value="@ViewBag.Directorio.Telefono">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
