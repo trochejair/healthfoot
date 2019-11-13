@@ -10,6 +10,7 @@
     @Styles.Render("~/Content/admincss")
     @Styles.Render("~/Content/font")
     @Styles.Render("~/Content/styleadmin")
+    @Styles.Render("~/Content/Admin/style-admin.css")
 
 </head>
 <body>
@@ -26,8 +27,6 @@
             </div>
             <nav class="navbar-custom">
                 <ul class="navbar-right list-inline float-right mb-0">
-
-
                     <!-- full screen -->
                     <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
                         <a class="nav-link waves-effect" href="#" id="btn-fullscreen"><i class="mdi mdi-fullscreen noti-icon"></i></a>
@@ -130,20 +129,46 @@
                         <li><a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Calendar</span></a></li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect">
-                                <i class="ti-email"></i>
+                                <i class="fas fa-boxes "></i>
                                 <span>
-                                    Email
+                                    Compras
                                     <span class="float-right menu-arrow">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </span>
                                 </span>
                             </a>
                             <ul class="submenu">
-                                <li><a href="email-inbox.html">Inbox</a></li>
-                                <li><a href="email-read.html">Email Read</a></li>
-                                <li><a href="email-compose.html">Email Compose</a></li>
+                                <li><a href="email-inbox.html">Proveedores</a></li>
+                                <li><a href="email-read.html">Insumos</a></li>
+                                <li><a href="email-compose.html">Ordenes</a></li>
                             </ul>
                         </li>
+                        
+                        <!---------------------------------------------------------------------------------------------------------------->
+                        <!--------------------------------USUARIOS------------------------------------------------------------------------>
+                        <!---------------------------------------------------------------------------------------------------------------->
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-user"></i>
+                                <span>
+                                    Usuarios
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li>@Html.ActionLink("Usuarios", "List", "Usuarios")</li>
+                                <li>@Html.ActionLink("Roles", "List", "Roles")</li>
+
+                            </ul>
+
+                        </li>
+
+                        <!---------------------------------------------------------------------------------------------------------------->
+                        <!---------------------------------------------------------------------------------------------------------------->
 
                     </ul>
                 </div>
