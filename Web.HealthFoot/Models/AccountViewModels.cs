@@ -79,6 +79,17 @@ namespace Web.HealthFoot.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        [StringLength(50)]
+        public string ApePat { get; set; }
+
+        [StringLength(50)]
+        public string ApeMat { get; set; }
+
+        public uint Status { get; set; }
+
+        public uint IdRol { get; set; }
+
     }
 
     public class ResetPasswordViewModel

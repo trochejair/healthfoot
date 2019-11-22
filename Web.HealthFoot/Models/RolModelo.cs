@@ -13,6 +13,7 @@ namespace Web.HealthFoot.Models
         public RolModelo()
         {
 
+            
             this.Rol = new List<Rol> {
 
                 new Rol{

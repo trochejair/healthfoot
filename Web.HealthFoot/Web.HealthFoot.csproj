@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -163,18 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\BundleConfig2.cs" />
-    <Compile Include="App_Start\BundleConfig3.cs" />
-    <Compile Include="App_Start\BundleConfig4.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\FilterConfig2.cs" />
-    <Compile Include="App_Start\FilterConfig3.cs" />
-    <Compile Include="App_Start\FilterConfig4.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\RouteConfig2.cs" />
-    <Compile Include="App_Start\RouteConfig3.cs" />
-    <Compile Include="App_Start\RouteConfig4.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -192,12 +185,66 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911200232057_ColumnasUsersLeonardo.cs" />
+    <Compile Include="Migrations\201911200232057_ColumnasUsersLeonardo.Designer.cs">
+      <DependentUpon>201911200232057_ColumnasUsersLeonardo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200233385_ColumnaRolesLA.cs" />
+    <Compile Include="Migrations\201911200233385_ColumnaRolesLA.Designer.cs">
+      <DependentUpon>201911200233385_ColumnaRolesLA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200234471_TablaPermisosLA.cs" />
+    <Compile Include="Migrations\201911200234471_TablaPermisosLA.Designer.cs">
+      <DependentUpon>201911200234471_TablaPermisosLA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200236102_TablaPermisosRolesLA.cs" />
+    <Compile Include="Migrations\201911200236102_TablaPermisosRolesLA.Designer.cs">
+      <DependentUpon>201911200236102_TablaPermisosRolesLA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200241568_TablaDirectorioLA.cs" />
+    <Compile Include="Migrations\201911200241568_TablaDirectorioLA.Designer.cs">
+      <DependentUpon>201911200241568_TablaDirectorioLA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200328526_ColumnasUserLA2.cs" />
+    <Compile Include="Migrations\201911200328526_ColumnasUserLA2.Designer.cs">
+      <DependentUpon>201911200328526_ColumnasUserLA2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetDirectorio.cs">
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetPermisos.cs">
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetPermisosRoles.cs">
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Directorio.cs" />
     <Compile Include="Models\DirectorioModelo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ModeloLA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloLA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloLA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLA.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Permiso.cs" />
     <Compile Include="Models\PermisoModelo.cs" />
     <Compile Include="Models\PermisosRol.cs" />
@@ -476,6 +523,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ModeloLA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLA.edmx</DependentUpon>
+      <LastGenOutput>ModeloLA.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModeloLA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLA.edmx</DependentUpon>
+      <LastGenOutput>ModeloLA.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\Admin\fonts\dripicons-v2.eot" />
@@ -526,6 +583,13 @@
     <Content Include="Content\Web\plugins\slick\fonts\slick.ttf" />
     <Content Include="Content\Web\plugins\slick\fonts\slick.woff" />
     <Content Include="Content\Web\plugins\slick\fonts\slickd41d.eot" />
+    <EntityDeploy Include="Models\ModeloLA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloLA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModeloLA.edmx.diagram">
+      <DependentUpon>ModeloLA.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -598,12 +662,20 @@
     <Content Include="Views\Insumos\Create.cshtml" />
     <Content Include="Views\Proveedores\Create.cshtml" />
     <Content Include="Views\Proveedores\Ordenes.cshtml" />
+    <Content Include="Views\Directorio\Create.cshtml" />
+    <Content Include="Views\Directorio\Edit.cshtml" />
+    <Content Include="Views\Directorio\List.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\List.cshtml" />
+    <Content Include="Views\Roles\Show.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\List.cshtml" />
+    <Content Include="Views\Usuarios\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Directorio\" />
-    <Folder Include="Views\Roles\" />
-    <Folder Include="Views\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -617,6 +689,29 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911200232057_ColumnasUsersLeonardo.resx">
+      <DependentUpon>201911200232057_ColumnasUsersLeonardo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200233385_ColumnaRolesLA.resx">
+      <DependentUpon>201911200233385_ColumnaRolesLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200234471_TablaPermisosLA.resx">
+      <DependentUpon>201911200234471_TablaPermisosLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200236102_TablaPermisosRolesLA.resx">
+      <DependentUpon>201911200236102_TablaPermisosRolesLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200241568_TablaDirectorioLA.resx">
+      <DependentUpon>201911200241568_TablaDirectorioLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200328526_ColumnasUserLA2.resx">
+      <DependentUpon>201911200328526_ColumnasUserLA2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
